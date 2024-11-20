@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Run Current TypeScript File",
+        "type": "node",
+        "request": "launch",
+        "program": "${file}",
+        "cwd": "${workspaceFolder}",
+        "runtimeExecutable": "npx",
+        "runtimeArgs": ["--loader", "ts-node/esm"],
+        "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+        "env": {
+          "NODE_NO_WARNINGS": "1"
+        },
+        "skipFiles": ["<node_internals>/**"]
+      }
+    ]
+  }
+  

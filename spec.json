@@ -1,0 +1,89 @@
+{
+  "projectName": "my-angular-app",
+  "menuType": "horizontal",
+  "footerContent": "© 2024 MyCompany. All rights reserved.",
+  "components": [
+    {
+      "menuName": "Users",
+      "name": "Register",
+      "fields": [
+        {
+          "name": "username",
+          "type": "textbox",
+          "required": true,
+          "validations": {
+            "required": true,
+            "minLength": 3,
+            "maxLength": 10
+          },
+          "validationMessage": "Username is required."
+        },
+        {
+          "name": "email",
+          "type": "textbox",
+          "required": true,
+          "regex": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+          "validationMessage": "Please enter a valid email address."
+        },
+        {
+          "name": "age",
+          "type": "textbox",
+          "validations": {
+            "required": true,
+            "range": [
+              18,
+              100
+            ]
+          }
+        },
+        {
+          "name": "gender",
+          "type": "radiobuttonlist",
+          "required": true,
+          "options": [
+            "Male",
+            "Female"
+          ]
+        },
+        {
+          "name": "interests",
+          "type": "checkboxlist",
+          "options": [
+            "Sports",
+            "Music",
+            "Travel"
+          ]
+        },
+        {
+          "name": "bio",
+          "type": "textarea",
+          "required": false
+        },
+        {
+          "name": "country",
+          "type": "dropdown",
+          "options": [
+            "USA",
+            "Canada",
+            "India"
+          ],
+          "required": true
+        }
+      ],
+      "buttons": [
+        "Submit",
+        "Reset"
+      ]
+    },
+    {
+      "menuName": "About",
+      "name": "About",
+      "fields": [
+        {
+          "name": "description",
+          "type": "string"
+        }
+      ]
+    }
+  ]
+}
